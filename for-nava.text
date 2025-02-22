@@ -1,0 +1,15 @@
+primar paso instalar las dependencias yo uso pnpm busca como instalarlo xd esta easy
+
+segundo paso ver con que modelo vas a trabajar por cada modelo necesitaras:
+
+un archivo modelo.routes.js que es donde iran los endpoints
+un archivo modelo.controller.js que es donde iran tus controladores basicamente
+los req y res
+un archivo modelo.service.js que es donde iran los servicios basicamente
+todo lo que sean peticiones directas a base de datos
+
+ya existen las carpetas solamente es hacer tus archivos
+en cada archivo tengo una estructura para que sea mas sencillo entender
+que esta haciendo cada cosa
+
+para la conexion a base de datos necesitaras un .env te dejo uno de ejemplo
