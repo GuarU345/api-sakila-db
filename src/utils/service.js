@@ -1,13 +1,7 @@
 export class CrudService {
-    constructor(model) {
+    constructor(model,primaryKey) {
         this.model = model
-        this.primaryKey = this.getPrimaryKey()
-    }
-
-    getPrimaryKey() {
-        const modelFields = this.model.dmmf.modelMap[this.model]?.fields
-        const primaryField = modelFields?.find(field => field.isId)
-        return primaryField?.name || 'id'
+        this.primaryKey = primaryKey
     }
 
     async create(data) {
