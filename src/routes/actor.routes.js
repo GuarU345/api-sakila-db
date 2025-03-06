@@ -1,12 +1,13 @@
 import { Router } from "express";
-import { actorController } from "../controllers/actor.controller.js";
+import { ActorController } from "../controllers/actor.controller.js";
 
 const router = Router()
+const actorController = new ActorController()
 
-router.get('/actors',actorController.getActors)
-router.get('/actors/:id',actorController.getActorById)
-router.post('/actors',actorController.createActor)
-router.put('/actors/:id',actorController.updateActor)
-router.delete('/actors/:id',actorController.deleteActor)
+router.get('/actors', actorController.read.bind(actorController))
+router.get('/actors/:id', actorController.readOne.bind(actorController))
+router.post('/actors', actorController.create.bind(actorController))
+router.put('/actors/:id', actorController.update.bind(actorController))
+router.delete('/actors/:id', actorController.delete.bind(actorController))
 
 export const actorRoutes = router
