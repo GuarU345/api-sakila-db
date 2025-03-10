@@ -6,6 +6,7 @@ import { cityRoutes } from "./city.routes.js";
 import { countryRoutes } from "./country.routes.js";
 import { customerRoutes } from "./customer.routes.js";
 import { filmRoutes } from './film.routes.js';
+import { filmCategoryRoutes } from "./film_category.routes.js";
 
 export const router = new Router()
 
@@ -16,3 +17,4 @@ router.use(cityRoutes)
 router.use(countryRoutes)
 router.use(customerRoutes)
 router.use(filmRoutes)
+router.use(filmCategoryRoutes)
