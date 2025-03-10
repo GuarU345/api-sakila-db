@@ -26,7 +26,7 @@ export class CrudController {
     async readOne(req, res) {
         const { id } = req.params;
         try {
-            const result = await this.service.readOne(id);
+            const result = await this.service.readOne(Number(id));
             res.json(result);
         } catch (error) {
             res.json({ error: error.message });
@@ -39,7 +39,7 @@ export class CrudController {
         const data = req.body;
 
         try {
-            const result = await this.service.update(id, data);
+            const result = await this.service.update(Number(id), data);
             res.json(result);
         } catch (error) {
             res.json({ error: error.message });
@@ -51,7 +51,7 @@ export class CrudController {
         const { id } = req.params;
 
         try {
-            const result = await this.service.delete(id);
+            const result = await this.service.delete(Number(id));
             res.json(result);
         } catch (error) {
             res.json({ error: error.message });
