@@ -116,7 +116,7 @@ model film_actor {
   @@id([actor_id, film_id])
   @@index([film_id], map: "idx_fk_film_id")
 }
-
+//NAVA
 model film_category {
   film_id     Int      @db.UnsignedSmallInt
   category_id Int      @db.UnsignedTinyInt
