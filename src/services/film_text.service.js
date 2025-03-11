@@ -1,4 +1,4 @@
-import { prisma } from "@prisma/client";
+import { prisma } from '../libs/prisma.js';
 import { CrudService } from "../utils/service.js";
 
 export class FilmTextService extends CrudService {
