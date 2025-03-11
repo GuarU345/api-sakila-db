@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { ActorController } from "../controllers/address.controller.js";
+import { AddressController } from "../controllers/address.controller.js";
 
 const router = Router()
-const addressController = new ActorController()
+const addressController = new AddressController()
 
 router.get('/address', addressController.read.bind(addressController))
 router.get('/address/:id', addressController.readOne.bind(addressController))
