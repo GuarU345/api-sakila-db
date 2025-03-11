@@ -7,6 +7,7 @@ import { countryRoutes } from "./country.routes.js";
 import { customerRoutes } from "./customer.routes.js";
 import { filmRoutes } from './film.routes.js';
 import { filmCategoryRoutes } from "./film_category.routes.js";
+import {filmTextRoutes} from "./film_text.routes.js"
 
 export const router = new Router()
 
@@ -18,3 +19,4 @@ router.use(countryRoutes)
 router.use(customerRoutes)
 router.use(filmRoutes)
 router.use(filmCategoryRoutes)
+router.use(filmTextRoutes)
