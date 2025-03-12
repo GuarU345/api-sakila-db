@@ -1,5 +1,5 @@
-import { CrudController } from "../utils/controller";
-import { RentalService } from "../services/rental.service";
+import { CrudController } from "../utils/controller.js";
+import { RentalService } from "../services/rental.service.js";
 
 export class RentalController extends CrudController {
     constructor() {

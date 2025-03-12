@@ -1,5 +1,5 @@
-import { CrudController } from "../utils/controller";
-import { PaymentService } from "../services/payment.service";
+import { CrudController } from "../utils/controller.js";
+import { PaymentService } from "../services/payment.service.js";
 
 export class PaymentController extends CrudController {
     constructor() {

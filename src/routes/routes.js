@@ -14,7 +14,6 @@ import { paymentRoutes } from "./payment.routes.js";
 import { rentalRoutes } from "./rental.routes.js";
 import { staffRoutes } from "./staff.routes.js";
 import { storeRoutes } from "./store.routes.js";
-import {filmRatingRoutes} from "./film_rating.routes.js"
 
 export const router = new Router()
 
@@ -33,7 +32,6 @@ router.use(paymentRoutes)
 router.use(rentalRoutes)
 router.use(staffRoutes)
 router.use(storeRoutes)
-router.use(filmRatingRoutes)
 
 
 

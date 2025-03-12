@@ -1,5 +1,5 @@
-import { CrudController } from "../utils/controller";
-import { StaffService } from "../services/staff.service";
+import { CrudController } from "../utils/controller.js";
+import { StaffService } from "../services/staff.service.js";
 
 export class StaffController extends CrudController {
     constructor() {
