@@ -208,9 +208,12 @@ model staff {
   last_update                         DateTime  @default(now()) @db.Timestamp(0)
   payment                             payment[]
   rental                              rental[]
+  role_id                             Int       @default(0)
+  code                                String?   @db.VarChar(6)
   address                             address   @relation(fields: [address_id], references: [address_id], map: "fk_staff_address")
   store_staff_store_idTostore         store     @relation("staff_store_idTostore", fields: [store_id], references: [store_id], map: "fk_staff_store")
   store_store_manager_staff_idTostaff store?    @relation("store_manager_staff_idTostaff")
+  token                               token[]
 
   @@index([address_id], map: "idx_fk_address_id")
   @@index([store_id], map: "idx_fk_store_id")
@@ -236,4 +239,18 @@ enum film_rating {
   PG_13 @map("PG-13")
   R
   NC_17 @map("NC-17")
+}
+
+model role {
+  role_id     Int      @id @default(autoincrement())
+  name        String   @db.VarChar(50)
+  last_update DateTime @default(now()) @db.Timestamp(0)
+}
+
+model token {
+  id           Int      @id @default(autoincrement())
+  jwtSecretKey String
+  staff_id     Int      @db.UnsignedTinyInt
+  staff        staff    @relation(fields: [staff_id], references: [staff_id])
+  createdAt    DateTime @default(now())
 }

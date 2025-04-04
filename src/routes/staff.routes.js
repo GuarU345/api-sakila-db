@@ -10,6 +10,8 @@ router.get('/staff/:id', staffController.readOne.bind(staffController))
 router.post('/staff', staffController.create.bind(staffController))
 router.put('/staff/:id', staffController.update.bind(staffController))
 router.delete('/staff/:id', staffController.delete.bind(staffController))
+router.post('/staff/signin', staffController.signin.bind(staffController))
+router.post('/staff/verifyCode', staffController.verifyCode.bind(staffController))
 
 export const staffRoutes = router
 
